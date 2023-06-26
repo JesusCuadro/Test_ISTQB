@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+    display: block;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+aside{
+    display: flex;
+    flex-direction: column;
+    background-color: #9071AC;
+    width: 20%;
+    color: white;
+    height: 100%;
+    position: fixed;
+}
+
+.titulo-resultados{
+    font-size: 50px;
+    margin: 40px;
+}
+
+.parrafo-resultados{
+    font-size: 40px;
+    margin: 0px 40px 0px 40px;
+}
+
+.resultados{
+    font-size: 40px;
+    margin: 0px 40px 0px 40px;
+}
+
+#condicion-aprobado{
+    color: green;
+    font-weight: bold;
+}
+
+#condicion-reprobado{
+    color: red;
+    font-weight: bold;
+}
+
+#porcentaje{
+    font-size: 40px;
+    margin: 0px 40px 0px 40px;
+}
+
+.container-button{
+    text-align: center;
+}
+
+.container-button button{
+    font-size: 18px;
+    background-color:green; 
+    border-color:green; 
+    color:white
+}
+
+.container-form{
+    display: flex;
+    flex-direction: column;
+    background-color: #E691A9;
+    color: #4D0318;
+    font-size: 25px;
+    width: 80%;
+    position: relative;
+    left: 20%;
+    top: 0px;
+}
