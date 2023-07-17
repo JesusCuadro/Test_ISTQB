@@ -1,58 +1,97 @@
 *{
-    margin: 0;
     display: block;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 aside{
     display: flex;
     flex-direction: column;
+    align-items: left;
     background-color: #9071AC;
-    width: 20%;
     color: white;
-    height: 100%;
-    position: fixed;
+    flex: 1 0 30%
+}
+
+.carrusel-button{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    flex: 1 0 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#siguienteBtn{
+    margin: 10px;
+}
+
+#anteriorBtn{
+    margin: 10px;
 }
 
 .titulo-resultados{
-    font-size: 50px;
-    margin: 40px;
+    font-size: 40px;
+    margin-left: 10px;
+    text-align: center;
+    font-weight: 1000;
 }
 
 .parrafo-resultados{
-    font-size: 40px;
-    margin: 0px 40px 0px 40px;
+    font-size: 30px;
+    margin-left: 10px;
 }
 
 .resultados{
-    font-size: 40px;
-    margin: 0px 40px 0px 40px;
+    font-size: 30px;
+    margin-left: 10px;
 }
 
 #condicion-aprobado{
     color: green;
     font-weight: bold;
+    font-size: 30px;
+    margin-left: 10px;
 }
 
 #condicion-reprobado{
     color: red;
     font-weight: bold;
+    font-size: 30px;
+    margin-left: 10px;
 }
 
 #porcentaje{
-    font-size: 40px;
-    margin: 0px 40px 0px 40px;
+    font-size: 30px;
+    margin-left: 10px;
 }
 
 .container-button{
+    display: flex;
     text-align: center;
+    flex: 1 0 100%;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
 }
 
 .container-button button{
-    font-size: 18px;
+    font-size: 20px;
     background-color:green; 
-    border-color:green; 
-    color:white
+    color:white;
+    padding: 20px;
+    border-radius: 10%;
+    border: none;
+    margin: 20px;
 }
 
 .container-form{
@@ -60,9 +99,29 @@ aside{
     flex-direction: column;
     background-color: #E691A9;
     color: #4D0318;
-    font-size: 25px;
-    width: 80%;
-    position: relative;
-    left: 20%;
-    top: 0px;
+    font-size: 15px;
+    width: 100%;
+    flex: 1 0 70%;
+    padding: 20px;
+}
+
+h3{
+    text-align: center;
+}
+
+label{
+    display: inline;
+}
+
+label input{
+    display: inline;
+    margin: 10px;
+    height: 18px;
+    width: 18px;
+    border-radius: 100%;
+}
+
+#correcion-1, #correcion-2{
+    color: #FFFFFF;
+    font-size: 20px;
 }

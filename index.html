@@ -5,215 +5,143 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
 </head>
 <body>
 
-    <aside>
-        <p class="titulo-resultados">Resultados :)</p> 
-        <p class="parrafo-resultados">Aciertos: <span id="aciertos"></span></p>
-        <p id="porcentaje"></p>
-        <br>
-        <p class="resultados">Usted esta:</p>
-        <p id="condicion-aprobado"> </p>
-        <p id="condicion-reprobado"> </p>
-    </aside>
+    <div class="container" style="margin: 0; padding: 0; max-width: 100%;">
 
-    <div class="container-form">
-        <form action="#" method="post">
-            <fieldset id="preguntas" style="border:none;">
-                <table>
-                    <tr>
-                        <td colspan="3">
-                            <h3>Pregunta 1: </h3>
-                            <span>¿Cual de las siguientes describe una condicion del test?</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><input type="radio" name="1" value="a" /></td>
-                        <td>A) </td>
-                        <td>Una característica distintiva de un componente o sistema.</td>
-                    </tr>
-                    <tr>
-                        <td><input type="radio" name="1" value="b" /></td>
-                        <td>B)</td>
-                        <td>Un aspecto comprobable de un componente o sistema identificado como base para la prueba.
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><input type="radio" name="1" value="c" /></td>
-                        <td>C)</td>
-                        <td>El grado en que un producto de software proporciona funciones que satisfacen las necesidades
-                            declarado e implícito cuando el software se utiliza bajo condiciones específicas..</td>
-                    </tr>
-                    <tr>
-                        <td><input type="radio" name="1" value="d" /></td>
-                        <td>D)</td>
-                        <td>Casos de prueba diseñados para ejecutar combinaciones de condiciones y acciones resultantes
-                            de ellos.
-                        </td>
+        <div class="carrusel-button">
+            <button class="btn btn-primary" id="anteriorBtn" onclick="mostrarDivAnterior()"> <- Anterior</button>
+            <button class="btn btn-secondary" id="siguienteBtn" onclick="mostrarDivSiguiente()">Siguiente -></button>
+        </div>
+
+        <aside>
+            <p class="titulo-resultados">- RESULTADOS -</p>
+            <p class="parrafo-resultados">Aciertos: <span id="aciertos"></span></p>
+            <p id="porcentaje">Porcentaje de aciertos: </p>
+            <p class="resultados">Usted esta:</p>
+            <p id="condicion-aprobado"></p>
+            <p id="condicion-reprobado"></p>
+        </aside>
+
+        <div id="preguntas" class="container-form">
+                        <div class="form-group container" id="pregunta_1" style="display: block;">
+
+                                <h3>Pregunta 1: </h3>
+                                <span>¿Cual de las siguientes describe una condicion del test?</span>
+
+                                
+                                <label for="1a"><input id="1a" type="radio" name="1" value="b" />A) Una característica distintiva de un componente o sistema.</label> <br>
+
+                                
+                                <label for="1b"><input id="1b" type="radio" name="1" value="b" />B) Un aspecto comprobable de un componente o sistema identificado como base para la prueba.</label> <br>
+                                
+                                
+                                <label for="1c"><input id="1c" type="radio" name="1" value="c" />C) El grado en que un producto de software proporciona funciones que satisfacen las necesidades declarado e implícito cuando el software se utiliza bajo condiciones específicas..</label> <br>  
+                            
+                            
+                                <label for="1d"><input id="1d" type="radio" name="1" value="d" />D) Casos de prueba diseñados para ejecutar combinaciones de condiciones y acciones resultantes de ellos.</label> <br>      
+                                
+                                <p id="correcion-1"></p>
+                        </div>
                         
-                    </tr>
-                    <tr>
-                        <td colspan="3">
-                            <hr/>
-                        </td>
-                    </tr>
-                    <!----------------------------------------------------------------------------------------------------------->
-                    <tr>
-                        <td colspan="3">
-                            <h3>Pregunta 2: </h3>
-                            <span>¿Cuál de las siguientes afirmaciones es un propósito válido para la prueba?</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><input type="radio" name="2" value="a" /></td>
-                        <td>A)</td>
-                        <td>Las pruebas deben comenzar lo más tarde posible para que el desarrollo tenga tiempo.
-                            suficiente para crear un buen producto.</td>
-                    </tr>
-                    <tr>
-                        <td><input type="radio" name="2" value="b" /></td>
-                        <td>B)</td>
-                        <td>Para validar que el objeto de prueba funciona según lo esperado por los usuarios y otras partes
-                            interesado.</td>
-                    </tr>
-                    <tr>
-                        <td> <input type="radio" name="2" value="c" /></td>
-                        <td>C)</td>
-                        <td>Demostrar que se identifican todos los posibles defectos.</td>
-                    </tr>
-                    <tr>
-                        <td> <input type="radio" name="2" value="d" /></td>
-                        <td>D)</td>
-                        <td>Para probar que cualquier defecto remanente no causará ninguna falla.</td>
-                    </tr>
-                    <tr>
-                        <td colspan="3">
-                            <hr />
-                        </td>
-                    </tr>
-                    <!----------------------------------------------------------------------------------------------------------->
+                        <!----------------------------------------------------------------------------------------------------------->
+                        <div class="form-group container" id="pregunta_2" style="display: block;">
+                            
+                                <h3>Pregunta 2: </h3>
+                                <span>¿Cuál de las siguientes afirmaciones es un propósito válido para la prueba?</span>
+                                
+                                
+                                <label for="2a"><input id="2a" type="radio" name="2" value="a" />A) Las pruebas deben comenzar lo más tarde posible para que el desarrollo tenga tiempo. suficiente para crear un buen producto.</label> <br>
+                            
+                                
+                                <label for="2b"><input id="2b" type="radio" name="2" value="b" />B) Para validar que el objeto de prueba funciona según lo esperado por los usuarios y otras partes interesado.</label> <br>
+                            
+                                
+                                <label for="2c"><input id="2c" type="radio" name="2" value="c" />C) Demostrar que se identifican todos los posibles defectos.</label><br>
+                                
+                                
+                                <label for="2d"><input id="2d" type="radio" name="2" value="d" />D) Para probar que cualquier defecto remanente no causará ninguna falla.</label> <br>
+                            
+                                <p id="correcion-2"></p>
+                        </div>
+                        
+                        <!----------------------------------------------------------------------------------------------------------->
 
-                    <tr>
-                        <td colspan="3">
-                            <h3>Pregunta 3: </h3>
-                            <p>¿Cuál de las siguientes afirmaciones describe correctamente la diferencia entre
-                                probar y depurar?
-                            </p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><input type="radio" name="3" value="a" /></td>
-                        <td>A)</td>
-                        <td>Las pruebas identifican la fuente de los defectos; los análisis de depuración
-                            defectos y propone actividades de prevención.</td>
-                    </tr>
-                    <tr>
-                        <td><input type="radio" name="3" value="b" /></td>
-                        <td>B)</td>
-                        <td>Las pruebas dinámicas muestran fallas causadas por defectos; la depuración eliminar el
-                            defectos,
-                            cuales son la fuente de fallas.</td>
-                    </tr>
-                    <tr>
-                        <td><input type="radio" name="3" value="c" /></td>
-                        <td>C)</td>
-                        <td>Las pruebas no eliminan los defectos; pero la depuración elimina los defectos que causan los bloqueos
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><input type="radio" name="3" value="d" /></td>
-                        <td>D)</td>
-                        <td>Las pruebas dinámicas previenen las causas de las fallas; la depuración elimina las fallas</td>
-                    </tr>
-                    <tr>
-                        <td colspan="3">
-                            <hr />
-                        </td>
-                    </tr>
-                    <!----------------------------------------------------------------------------------------------------------->
+                            <div class="form-group container" id="pregunta_3" style="display: block;">
+                                
+                                <h3>Pregunta 3: </h3>
+                                <span>¿Cuál de las siguientes afirmaciones describe correctamente la diferencia entre probar y depurar?</span>
+                        
+                                
+                                <label for="3a"><input id="3a" type="radio" name="3" value="a" />A) Las pruebas identifican la fuente de los defectos; los análisis de depuración defectos y propone actividades de prevención.</label> <br>
+                            
+                                
+                                <label for="3b"><input id="3b" type="radio" name="3" value="b" />B) Las pruebas dinámicas muestran fallas causadas por defectos; la depuración eliminar el defectos, cuales son la fuente de fallas.</label> <br>
+                            
+                                
+                                <label for="3c"><input id="3c" type="radio" name="3" value="c" />C) Las pruebas no eliminan los defectos; pero la depuración elimina los defectos que causan los bloqueos.</label> <br>
+                            
+                                
+                                <label for="3d"><input id="3d" type="radio" name="3" value="d" />D) Las pruebas dinámicas previenen las causas de las fallas; la depuración elimina las fallas.</label> <br>
+                                
+                                <p id="correcion-3"></p>
 
-                    <tr>
-                        <td colspan="3">
-                            <h3>Pregunta 4:</h3>
-                            <p>¿Cuál de las declaraciones a continuación describe la situación más común para una falla descubierta?
-                                durante las pruebas o en producción?
-                            </p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><input type="radio" name="4" value="a" /></td>
-                        <td>A)</td>
-                        <td>El producto fallaba cuando el usuario seleccionaba una opción en un cuadro de diálogo.</td>
-                    </tr>
-                    <tr>
-                        <td><input type="radio" name="4" value="b" /></td>
-                        <td>B)</td>
-                        <td>La versión incorrecta de un archivo de código fuente compilado se incluyó en la compilación.</td>
-                    </tr>
-                    <tr>
-                        <td><input type="radio" name="4" value="c" /></td>
-                        <td>C)</td>
-                        <td>El algoritmo informático utilizó las variables de entrada incorrectas.</td>
-                    <tr>
-                        <td><input type="radio" name="4" value="d" /></td>
-                        <td>D)</td>
-                        <td>El desarrollador malinterpretó el requisito del algoritmo.</td>
-                    </tr>
-                    <tr>
-                        <td colspan="3">
-                            <hr />
-                        </td>
-                    </tr>
+                            </div>
+                        
+                        <!----------------------------------------------------------------------------------------------------------->
 
-                    <!----------------------------------------------------------------------------------------------------------->
+                            <div class="form-group container" id="pregunta_4" style="display: block;">
+                            
+                                <h3>Pregunta 4:</h3>
+                                <span>¿Cuál de las declaraciones a continuación describe la situación más común para una falla descubierta? durante las pruebas o en producción?</span>
 
-                    <tr>
-                    <td colspan="3">
-                        <h3>Pregunta 5: </h3>
-                        <p>¿Cómo pueden las pruebas ser parte del control de calidad?</p>
-                    </td>
-                </tr>
-                <tr>
-                    <td><input type="radio" name="5" value="a" /></td>
-                    <td>A)</td>
-                    <td>Garantiza que los requisitos estén suficientemente detallados.</td>
+                                
+                                <label for="4a"><input id="4a" type="radio" name="4" value="a" />A) El producto fallaba cuando el usuario seleccionaba una opción en un cuadro de diálogo.</label><br>
+                                
+                                
+                                <label for="4b"><input id="4b" type="radio" name="4" value="b" />B) La versión incorrecta de un archivo de código fuente compilado se incluyó en la compilación.</label><br> 
+                        
+                                
+                                <label for="4c"><input id="4c" type="radio" name="4" value="c" />C) El algoritmo informático utilizó las variables de entrada incorrectas.</label><br>
 
-                </tr>
-                <tr>
-                    <td><input type="radio" name="5" value="b" /></td>
-                    <td>B)</td>
-                    <td>Las pruebas reducen el riesgo de una mala calidad del software.</td>
-                </tr>
-                <tr>
-                    <td><input type="radio" name="5" value="c" /></td>
-                    <td>C)</td>
-                    <td>Asegura que se sigan las reglas de la organización.</td>
-                </tr>
-                <tr>
-                    <td><input type="radio" name="5" value="d" /></td>
-                    <td>D)</td>
-                    <td>Mide la Calidad del Software en términos del número de casos de prueba ejecutados.</td>
-                </tr>
-                <tr>
-                    <td colspan="3">
-                        <hr />
-                    </td>
-                </tr>
+                                
+                                <label for="4d"><input id="4d" type="radio" name="4" value="d" />D) El desarrollador malinterpretó el requisito del algoritmo.</label><br>
 
-                </table>
-            </fieldset>
-        </form>
-        <br>
-            <hr />
-            <div class="container-button" style="text-align:center;">
-                <button onclick="respuestas()" id="botao">Enviar</button>
-            </div>
+                                <p id="correcion-4"></p>
+
+                            </div>
+                        <!----------------------------------------------------------------------------------------------------------->
+
+                            <div class="form-group container" id="pregunta_5" style="display: block;">
+                        
+                                <h3>Pregunta 5: </h3>
+                                <span>¿Cómo pueden las pruebas ser parte del control de calidad?</span>
+
+                                
+                                <label for="5a"><input id="5a" type="radio" name="5" value="a" />A) Garantiza que los requisitos estén suficientemente detallados.</label><br>
+
+                                
+                                <label for="5b"><input id="5b" type="radio" name="5" value="b" />B) Las pruebas reducen el riesgo de una mala calidad del software.</label><br>
+                        
+                                <label for="5c"><input id="5c" type="radio" name="5" value="c" />C) Asegura que se sigan las reglas de la organización.</label><br>
+
+                                <label for="5d"><input id="5d" type="radio" name="5" value="d" />D) Mide la Calidad del Software en términos del número de casos de prueba ejecutados.</label><br>   
+
+                                <p id="correcion-5"></p>
+
+                            </div>                         
+        </div>
+        <div class="container-button" style="text-align:center;">
+            <button onclick="respuestas()" id="boton">Enviar</button>
+        </div>
     </div>
+    
+    <script src="scripts/anterior_u_siguiente.js"></script>
     <script src="scripts/index.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>

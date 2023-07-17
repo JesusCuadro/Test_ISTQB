@@ -33,13 +33,12 @@ function respuestas() {
 
   if (preguntaNoRespondida.length > 0) {
     alerta = window.open("", "Alerta", "width=400,height=245");
-    alerta.close();
-    alerta = window.open("", "Alerta", "width=400,height=245");
-    alerta.document.writeln("No ha respondido la(s) pregunta(s) ");
+    alerta.document.writeln("No ha respondido la(s) pregunta(s)");
     alerta.document.write('<p style="font-size: 20px;">');
+
     for (i = 0; i < preguntaNoRespondida.length; i++) {
       if (i < 4) {
-        alerta.document.writeln(" " + preguntaNoRespondida[i] + " - ");
+        alerta.document.writeln(" " + preguntaNoRespondida[i] + " ");
       } else {
         alerta.document.writeln(" " + preguntaNoRespondida[i] + " ");
       }
@@ -56,9 +55,13 @@ function respuestas() {
     for (let i = 0; i < 5; i++) {
       if (i == 0 && establecerResultado[i] == "b") {
         contarPreguntas = contarPreguntas + 1;
+      }else{
+        document.getElementById("correcion-1").innerHTML = "La respuesta correcta es la B, porque: Un aspecto comprobable de un componente o sistema identificado como base para la prueba se refiere a una característica o propiedad que se puede verificar durante el proceso de prueba. Estos aspectos comprobables son esenciales para definir las condiciones de un test y determinar si el componente o sistema cumple con los requisitos establecidos.";
       }
       if (i == 1 && establecerResultado[i] == "b") {
         contarPreguntas = contarPreguntas + 1;
+      }else{
+        document.getElementById("correcion-2").innerHTML = "La respuesta correcta es la B, porque: El propósito de validar que el objeto de prueba funciona según lo esperado por los usuarios y otras partes interesadas es, de hecho, un propósito válido para una prueba. La validación es una actividad crucial dentro del proceso de prueba, que tiene como objetivo principal determinar si un sistema o componente cumple con los requisitos establecidos y satisface las necesidades y expectativas de los usuarios y otras partes interesadas.";
       }
       if (i == 2 && establecerResultado[i] == "b") {
         contarPreguntas = contarPreguntas + 1;
@@ -71,13 +74,10 @@ function respuestas() {
       }
     }
 
-    porcentaje =
-      100 -
-      (((totalPreguntas - contarPreguntas) / totalPreguntas) * 100).toFixed(2);
+    porcentaje = 100 - (((totalPreguntas - contarPreguntas) / totalPreguntas) * 100).toFixed(2);
     document.getElementById("aciertos").innerHTML = contarPreguntas;
-    document.getElementById("porcentaje").innerHTML =
-      "Porcentaje de acierto " + porcentaje + " %.";
-    if (porcentagem >= 80) {
+    document.getElementById("porcentaje").innerHTML = "Porcentaje de aciertos: " + porcentaje + " %.";
+    if (porcentaje >= 80) {
       situacion = "Aprobado";
       document.getElementById("condicion-aprobado").innerHTML = situacion;
       document.getElementById("condicion-reprobado").innerHTML = "";
@@ -86,6 +86,7 @@ function respuestas() {
       document.getElementById("condicion-reprobado").innerHTML = situacion;
       document.getElementById("condicion-aprobado").innerHTML = "";
     }
+    
     document.getElementById("boton").disabled = true;
     document.getElementById("preguntas").disabled = true;
     console.log("Total de aciertos: " + contarPreguntas);
